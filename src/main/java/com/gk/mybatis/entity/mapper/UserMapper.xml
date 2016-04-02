@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gk.mybatis.entity.mapper.UserMapper">
+	<resultMap type="com.gk.mybatis.entity.User" id="UserResult">
+		<id property="id" column="id"/>
+		<result property="userCode" column="usercode"/>
+		<result property="userName" column="username"/>
+		<result property="password" column="password"/>
+		<result property="salt" column="salt"/>
+		<result property="locked" column="locked"/>
+	</resultMap>
+	
+	<select id="getUserList" resultMap="UserResult">
+		select * from sys_user
+	</select>
+	
+</mapper> 

@@ -3,3 +3,4 @@
 *.prefs
 /.gitignore
 .project
+/.settings/
